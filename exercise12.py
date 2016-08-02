@@ -10,6 +10,6 @@ for i in range(1,11):
     value = str(value)
     i_network[-1] = value
     ip = '.'.join(i_network)
-    value = os.system("ping -c 1 -w 1 " + ip)
+    value = os.system("ping -c 1 -w 1 " + ip + " > /dev/null")
     if value == 0:
         print "{} is up".format(ip)
